@@ -1,6 +1,10 @@
 cmake_minimum_required(VERSION 3.22)
 project(PsyPlugins VERSION 0.1.0)
 
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
 option(COPY_AFTER_BUILD "Plugins nach dem Build in den System-Plugin-Ordner kopieren" ON)
 
 # JUCE wird automatisch geladen, kein Submodule nötig
@@ -11,7 +15,7 @@ FetchContent_Declare(JUCE
     GIT_SHALLOW TRUE)
 FetchContent_MakeAvailable(JUCE)
 
-# Gemeinsame Einstellungen für beide Plugins
+# Gemeinsame Einstellungen für alle Plugins
 function(add_psy_plugin NAME CODE SOURCE)
     juce_add_plugin(${NAME}
         COMPANY_NAME "PsyPlugins"
