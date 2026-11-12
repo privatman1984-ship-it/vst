@@ -38,8 +38,8 @@ Für Rolling-Bässe: Rate 1/16, Shape Triangle, Depth 0.3.
 Voraussetzungen: CMake ≥ 3.22 und ein C++17-Compiler (Visual Studio, Xcode oder GCC/Clang).
 
 ```bash
-git clone https://github.com/<dein-name>/PsyPlugins.git
-cd PsyPlugins
+git clone https://github.com/privatman1984-ship-it/vst.git
+cd vst
 cmake -B build -DCMAKE_BUILD_TYPE=Release
 cmake --build build --config Release
 ```
